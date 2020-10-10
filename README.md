@@ -1,13 +1,14 @@
-Forty Facets Demo
+Forty Facets Demo (2020)
 =========
 
-This is a demo application for the forty_facets gem.
+This is a demo application where I tried to update the existing demo of Forty Facets to my current setup.
 
 ## Setup
+* Clone the repository.
+* Run rake db:create db:migrate to build the database.
+* Run rake movies:import to add movies to the database.
+* Run rails server to run the application.
 
-- Clone the repository.
-- Run `rake db:create db:migrate` to build the database.
-- Run `rake movies:import` to add movies to the database.
-- Run `rails server` to run the application.
-
-https://github.com/fortytools/forty_facets
+## Resources
+* https://github.com/fortytools/forty_facets
+* https://github.com/FortySource/forty_facets_demo

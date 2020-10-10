@@ -1,4 +1,4 @@
-class CreateYears < ActiveRecord::Migration
+class CreateYears < ActiveRecord::Migration[6.0]
   def change
     create_table :years do |t|
       t.integer :year

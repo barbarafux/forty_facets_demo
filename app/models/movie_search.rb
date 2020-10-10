@@ -4,7 +4,7 @@ class MovieSearch < FortyFacets::FacetSearch
   text  :title, name: 'Title'
   range :price, name: 'Price'
   facet :genre, name: 'Genre'
-  facet :year,  order: Proc.new { |year| -year }
+  facet :year,  order: proc { |year| -year }
 
   facet :studio,  name: 'Studio',  order: :name
   facet :actors,  name: 'Actors',  order: :name
@@ -13,7 +13,6 @@ class MovieSearch < FortyFacets::FacetSearch
   scope :classics, name: 'Classics'
 
   orders 'Title' => :title,
-         'price, cheap first' => "price asc",
-         'price, expensive first' => {price: :desc, title: :desc}
-
+         'price, cheap first' => 'price asc',
+         'price, expensive first' => { price: :desc, title: :desc }
 end
